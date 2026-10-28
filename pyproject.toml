@@ -1,0 +1,16 @@
+[project]
+name = "cathaybk-precondition"
+version = "1.0.0"
+description = "Pre-interview exercises: two logic problems and an Appium mobile web test"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+appium = ["Appium-Python-Client>=4"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100

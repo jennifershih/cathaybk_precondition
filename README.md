@@ -1,5 +1,29 @@
 # cathaybk_precondition
 
+[![ci](https://github.com/jennifershih/cathaybk_precondition/actions/workflows/ci.yml/badge.svg)](https://github.com/jennifershih/cathaybk_precondition/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Appium](https://img.shields.io/badge/Appium-2-662D91?logo=appium&logoColor=white)
+
+面試前測：兩題程式邏輯與一題 Appium 行動網頁自動化測試（2023）。
+
+## 執行方式
+
+```bash
+pip install -e ".[dev,appium]"
+python program_logic_1.py   # 德瑞克 33、尚恩 75、傑夫 65、馬基 40，總成績 213
+python program_logic_2.py   # 第 10 次落地共 299.609375 公分，第 10 次反彈 0.09765625 公分
+pytest                      # 邏輯題的單元測試
+```
+
+自動化測試題需要 Appium 2 server 與一台 Android 裝置或模擬器：
+
+```bash
+appium &                                  # 預設 http://127.0.0.1:4723
+ANDROID_DEVICE="emulator-5554" python automated_test.py
+```
+
+截圖會存到 `screenshots/`。官網可能已改版，選擇器失效時需依實際頁面調整。
+
 ## 程式邏輯題目一
 ### 檔案：program_logic_1.py
 ### 題目：
